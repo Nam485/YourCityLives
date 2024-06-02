@@ -107,26 +107,6 @@ const About = () => {
           </div>
         </div>
       </div>
-
-      {/* Container 4 */}
-      <div ref={(ref) => containersRef.current.push(ref)} className="container">
-        <div className="detail">
-          <div className="detail-right">
-            <h3>Start living your best life <br />from <span>day one</span></h3>
-            <div className="data">Bring a box full of hopes, dreams, ambitions… and of course, your personal belongings. Everything else - furniture, appliances, food - has already been taken care of.</div>
-            <button className="explore-button">Explore More</button>
-          </div>
-          <div className="detail-left">
-            <div className="detail-left-r">
-              <img src="/assets/about-11.webp" alt="About 11" />
-              <img src="/assets/about-12.webp" alt="About 12" />
-            </div>
-            <div className="detail-left-l">
-              <img src="/assets/about-10.webp" alt="About 10" />
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

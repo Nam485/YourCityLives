@@ -1,8 +1,6 @@
-/* About.css */
-
 .a-wrapper {
   padding: 2rem;
-  background-color:black; /* Light grey background */
+  background-color: black;
 }
 
 .headings {
@@ -17,12 +15,12 @@
 }
 
 .heading h1 span {
-  color: #fdc063; /* Primary color */
+  color: #fdc063;
 }
 
 .heading p {
   font-size: 1.25rem;
-  color: rgb(211, 202, 202); /* Medium grey color */
+  color: rgb(211, 202, 202);
 }
 
 .container1,
@@ -33,18 +31,18 @@
   gap: 2rem;
   padding: 3rem;
   margin-bottom: 6rem;
-  opacity: 0; /* Start with containers hidden */
-  transform: translateY(20px); /* Move containers down */
+  opacity: 0;
+  transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
-  position: relative; /* For pseudo-element positioning */
+  position: relative;
   background: black;
-  border-radius: 10px; /* Optional: add border radius for smoother edges */
+  border-radius: 10px;
 }
 
 .container1.animate,
 .container.animate {
-  opacity: 1; /* Show containers */
-  transform: translateY(0); /* Move containers up */
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .detail {
@@ -56,7 +54,7 @@
 .detail-left,
 .detail-right {
   flex: 1;
-  min-width: 300px; /* Ensure a minimum width for responsiveness */
+  min-width: 300px;
 }
 
 .detail-left {
@@ -73,19 +71,19 @@
 
 .detail-left-l img,
 .detail-left-r img {
-  border-radius: 10px; /* Rounded corners for images */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
-  object-fit: cover; /* Maintain aspect ratio and cover container */
-  height: 100%; /* Ensure the image takes up full height */
+  object-fit: cover;
+  height: 100%;
 }
 
 .detail-left-l img {
-  height: 30rem; /* Set height for images in .detail-left-l */
+  height: 30rem;
 }
 
 .detail-left-r img {
-  height: 14.5rem; /* Set a consistent height for images in .detail-left-r to match .detail-left-l */
+  height: 14.5rem;
 }
 
 .detail-right {
@@ -97,16 +95,16 @@
 
 .detail-right h3 {
   font-size: 3rem;
-  color: white; /* Dark grey color */
+  color: white;
 }
 
 .detail-right h3 span {
-  color: #fdc063; /* Primary color */
+  color: #fdc063;
 }
 
 .data {
   font-size: 1.25rem;
-  color: rgb(211, 202, 202); /* Medium grey color */
+  color: rgb(211, 202, 202);
   margin-top: 1rem;
 }
 
@@ -116,7 +114,7 @@
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   color: #fff;
-  background-color: #007bff; /* Primary color */
+  background-color: #007bff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -124,14 +122,52 @@
 }
 
 .explore-button:hover {
-  background-color: #0056b3; /* Darker shade of primary color */
+  background-color: #0056b3;
 }
 
+/* Media Queries for Responsiveness */
+
+/* Laptops */
+@media (max-width: 1200px) {
+  .container1,
+  .container {
+    padding: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .detail {
+    gap: 3rem;
+  }
+
+  .detail-right h3 {
+    font-size: 2.5rem;
+  }
+
+  .data {
+    font-size: 1.125rem;
+  }
+
+  .explore-button {
+    width: 40%;
+  }
+}
+
+/* Tablets */
 @media (max-width: 768px) {
+  .a-wrapper {
+    padding: 1.5rem;
+  }
+
+  .container1,
+  .container {
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
   .detail {
     flex-direction: column;
     align-items: center;
-    gap: 3rem; /* Adjust gap for better spacing */
+    gap: 3rem;
   }
 
   .detail-left,
@@ -139,29 +175,70 @@
     width: 100%;
   }
 
-  .detail-left-l img,
-  .detail-left-r img {
-    height: auto; /* Reset height for responsiveness */
-  }
-
   .detail-left {
-    flex-direction: column; /* Stack columns in small screens */
+    flex-direction: column;
     gap: 1rem;
   }
 
-  .detail-left-l img {
-    height: 20rem; /* Adjust height for smaller screens */
-  }
-
+  .detail-left-l img,
   .detail-left-r img {
-    height: 10rem; /* Adjust height for smaller screens */
+    height: auto;
   }
 
   .detail-right h3 {
-    font-size: 2.5rem; /* Adjust font size for smaller screens */
+    font-size: 2rem;
   }
 
   .data {
-    font-size: 1rem; /* Adjust font size for smaller screens */
+    font-size: 1rem;
+  }
+
+  .explore-button {
+    width: 50%;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .a-wrapper {
+    padding: 1rem;
+  }
+
+  .heading h1 {
+    font-size: 2rem;
+  }
+
+  .heading p {
+    font-size: 1rem;
+  }
+
+  .container1,
+  .container {
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .detail {
+    gap: 2rem;
+  }
+
+  .detail-left-l img {
+    height: 15rem;
+  }
+
+  .detail-left-r img {
+    height: 8rem;
+  }
+
+  .detail-right h3 {
+    font-size: 1.5rem;
+  }
+
+  .data {
+    font-size: 0.875rem;
+  }
+
+  .explore-button {
+    width: 60%;
   }
 }

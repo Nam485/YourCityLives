@@ -5,16 +5,16 @@
     scrollbar-width: none;
     padding: 2rem 1rem;
     background-color: black;
-}
-
-a {
+  }
+  
+  a {
     background-color: transparent;
     text-decoration: none;
     cursor: pointer;
     color: inherit;
-}
-
-.cc-container {
+  }
+  
+  .cc-container {
     width: 4.64286rem;
     margin-right: 1.42857rem;
     background-color: black;
@@ -28,9 +28,9 @@ a {
     padding: 1.28571rem 1.78571rem;
     overflow: hidden;
     transition: transform 0.4s ease-in-out;
-}
-
-.cc-container::before {
+  }
+  
+  .cc-container::before {
     content: '';
     position: absolute;
     top: 0;
@@ -41,29 +41,29 @@ a {
     background-size: cover;
     background-position: center;
     transition: left 0.5s ease-in-out;
-}
-
-.cc-container:hover::before {
+  }
+  
+  .cc-container:hover::before {
     left: 0;
-}
-
-.cc-container:hover img,
-.cc-container:hover .textComponent {
+  }
+  
+  .cc-container:hover img,
+  .cc-container:hover .textComponent {
     opacity: 0;
     transform: translateX(-100%);
-    transition: opacity .4s ease-in-out, transform 1s ease-in-out;
-}
-
-img {
+    transition: opacity 0.4s ease-in-out, transform 1s ease-in-out;
+  }
+  
+  img {
     object-fit: contain;
     width: 4.64286rem;
     height: 3.92857rem;
     cursor: pointer;
     margin: 0;
     transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.textComponent {
+  }
+  
+  .textComponent {
     color: #fdc063;
     font-size: 1rem;
     font-weight: 600;
@@ -74,4 +74,68 @@ img {
     background: none;
     text-overflow: unset;
     transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-}
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* Laptops */
+  @media (max-width: 1200px) {
+    .cc-container {
+      width: 6rem;
+      padding: 1rem 1.5rem;
+    }
+  
+    img {
+      width: 6rem;
+      height: 5rem;
+    }
+  
+    .textComponent {
+      font-size: 1.25rem;
+      padding-top: 1.5rem;
+    }
+  }
+  
+  /* Tablets */
+  @media (max-width: 768px) {
+    .cc-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .cc-container {
+      width: 8rem;
+      margin-bottom: 1rem;
+      margin-right: 0;
+      padding: 0.75rem 1.25rem;
+    }
+  
+    img {
+      width: 8rem;
+      height: 6.5rem;
+    }
+  
+    .textComponent {
+      font-size: 1.5rem;
+      padding-top: 1rem;
+    }
+  }
+  
+  /* Mobile Phones */
+  @media (max-width: 480px) {
+    .cc-container {
+      width: 10rem;
+      padding: 0.5rem 1rem;
+    }
+  
+    img {
+      width: 10rem;
+      height: 8rem;
+    }
+  
+    .textComponent {
+      font-size: 1.75rem;
+      padding-top: 0.5rem;
+    }
+  }
+  
