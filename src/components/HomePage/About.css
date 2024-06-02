@@ -1,0 +1,167 @@
+/* About.css */
+
+.a-wrapper {
+  padding: 2rem;
+  background-color:black; /* Light grey background */
+}
+
+.headings {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.heading h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.heading h1 span {
+  color: #fdc063; /* Primary color */
+}
+
+.heading p {
+  font-size: 1.25rem;
+  color: rgb(211, 202, 202); /* Medium grey color */
+}
+
+.container1,
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem;
+  margin-bottom: 6rem;
+  opacity: 0; /* Start with containers hidden */
+  transform: translateY(20px); /* Move containers down */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  position: relative; /* For pseudo-element positioning */
+  background: black;
+  border-radius: 10px; /* Optional: add border radius for smoother edges */
+}
+
+.container1.animate,
+.container.animate {
+  opacity: 1; /* Show containers */
+  transform: translateY(0); /* Move containers up */
+}
+
+.detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.detail-left,
+.detail-right {
+  flex: 1;
+  min-width: 300px; /* Ensure a minimum width for responsiveness */
+}
+
+.detail-left {
+  display: flex;
+  gap: 1rem;
+}
+
+.detail-left-l,
+.detail-left-r {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail-left-l img,
+.detail-left-r img {
+  border-radius: 10px; /* Rounded corners for images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+  width: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover container */
+  height: 100%; /* Ensure the image takes up full height */
+}
+
+.detail-left-l img {
+  height: 30rem; /* Set height for images in .detail-left-l */
+}
+
+.detail-left-r img {
+  height: 14.5rem; /* Set a consistent height for images in .detail-left-r to match .detail-left-l */
+}
+
+.detail-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.detail-right h3 {
+  font-size: 3rem;
+  color: white; /* Dark grey color */
+}
+
+.detail-right h3 span {
+  color: #fdc063; /* Primary color */
+}
+
+.data {
+  font-size: 1.25rem;
+  color: rgb(211, 202, 202); /* Medium grey color */
+  margin-top: 1rem;
+}
+
+.explore-button {
+  width: 30%;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff; /* Primary color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.explore-button:hover {
+  background-color: #0056b3; /* Darker shade of primary color */
+}
+
+@media (max-width: 768px) {
+  .detail {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem; /* Adjust gap for better spacing */
+  }
+
+  .detail-left,
+  .detail-right {
+    width: 100%;
+  }
+
+  .detail-left-l img,
+  .detail-left-r img {
+    height: auto; /* Reset height for responsiveness */
+  }
+
+  .detail-left {
+    flex-direction: column; /* Stack columns in small screens */
+    gap: 1rem;
+  }
+
+  .detail-left-l img {
+    height: 20rem; /* Adjust height for smaller screens */
+  }
+
+  .detail-left-r img {
+    height: 10rem; /* Adjust height for smaller screens */
+  }
+
+  .detail-right h3 {
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .data {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+}

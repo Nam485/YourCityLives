@@ -1,0 +1,77 @@
+.cc-wrapper {
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+    scrollbar-width: none;
+    padding: 2rem 1rem;
+    background-color: black;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+.cc-container {
+    width: 4.64286rem;
+    margin-right: 1.42857rem;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e8d7c1;
+    border-radius: 10px;
+    position: relative;
+    padding: 1.28571rem 1.78571rem;
+    overflow: hidden;
+    transition: transform 0.4s ease-in-out;
+}
+
+.cc-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-image: var(--hover-image);
+    background-size: cover;
+    background-position: center;
+    transition: left 0.5s ease-in-out;
+}
+
+.cc-container:hover::before {
+    left: 0;
+}
+
+.cc-container:hover img,
+.cc-container:hover .textComponent {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity .4s ease-in-out, transform 1s ease-in-out;
+}
+
+img {
+    object-fit: contain;
+    width: 4.64286rem;
+    height: 3.92857rem;
+    cursor: pointer;
+    margin: 0;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.textComponent {
+    color: #fdc063;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 2.14286rem 0 0;
+    text-align: center;
+    line-height: 1.5rem;
+    cursor: pointer;
+    background: none;
+    text-overflow: unset;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
