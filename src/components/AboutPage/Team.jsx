@@ -1,15 +1,19 @@
 import React from 'react';
+import chirag from '../../assets/chirag.jpg';
+import lakshay from '../../assets/lakshay.jpg';
+import namit from '../../assets/nam.jpg';
+import vardhan from '../../assets/vardhan.jpg';
 import './Team.css';
 
 const Team = () => {
     const teamlead = [
-        { name: 'Vardhan Chawla', designation: 'CEO & FOUNDER', hoverImage: '/assets/vardhan.jpg', linkedin: 'https://www.linkedin.com/in/vardan-chawla-671256176?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
-        { name: 'Chirag Bhargava', designation: 'TECHNICAL HEAD', hoverImage: '/assets/chirag.jpg', linkedin: 'https://www.linkedin.com/in/chirag-bhargava-b636a0229/' },
+        { name: 'Vardhan Chawla', designation: 'CEO & FOUNDER', hoverImage:vardhan , linkedin: 'https://www.linkedin.com/in/vardan-chawla-671256176?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+        { name: 'Chirag Bhargava', designation: 'TECHNICAL HEAD', hoverImage:chirag , linkedin: 'https://www.linkedin.com/in/chirag-bhargava-b636a0229/' },
     ];
 
     const specialThanks = [
-        { name: 'Namit Goyal', designation: 'Website Developer', hoverImage: '/assets/nam.jpg', linkedin: 'https://www.linkedin.com/in/namit-goyal-743315227/' },
-        { name: 'Lakshay Bansal', designation: 'Website Developer', hoverImage: '/assets/lakshay.jpg', linkedin: 'https://www.linkedin.com/in/lakshay-bansal-2b51a4227?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+        { name: 'Namit Goyal', designation: 'Website Developer', hoverImage:namit , linkedin: 'https://www.linkedin.com/in/namit-goyal-743315227/' },
+        { name: 'Lakshay Bansal', designation: 'Website Developer', hoverImage:lakshay , linkedin: 'https://www.linkedin.com/in/lakshay-bansal-2b51a4227?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
     ];
 
     return (

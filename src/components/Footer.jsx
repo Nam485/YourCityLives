@@ -52,6 +52,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <div className="copyright">
+        <p>Copyright &copy; 2024 | All Rights Reserved by YourCityLives</p>
+      </div>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
@@ -7,6 +8,7 @@ import LoginPopup from './components/LoginPopup'; // Ensure correct path
 import AboutPage from './components/pages/About/AboutPage';
 import ContactPage from './components/pages/Contact/ContactPage';
 import HomePage from './components/pages/Home/HomePage';
+import ServicePage from './components/pages/Service/ServicePage';
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
@@ -20,6 +22,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/service" element={<ServicePage />} />
           {/* <Route path="/get-started" element={<GetStartedPage />} /> */}
         </Routes>
         <Footer />

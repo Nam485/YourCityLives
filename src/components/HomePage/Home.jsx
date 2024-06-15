@@ -1,12 +1,13 @@
 import React from 'react';
-import CountUp from "react-countup";
+import CountUp from 'react-countup';
 import { HiLocationMarker } from 'react-icons/hi';
 import Slider from 'react-slick';
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
 import picture1 from '../../Picture1.png';
 import picture2 from '../../Picture2.png';
 import picture3 from '../../Picture3.png';
+import heroBackground from '../../assets/hero-backimg.svg';
 import './Home.css';
 
 const Home = () => {
@@ -21,12 +22,17 @@ const Home = () => {
   };
 
   return (
-    <section className="home-wrapper">
+    <section
+      className="home-wrapper"
+      style={{
+        backgroundImage: `url(${heroBackground}), linear-gradient(to bottom, #151218 35%, #ffffff 73%)`,
+      }}
+    >
       <div className='home-Container'>
         <div className="home-left">
           <div className="home-title">
             <div className="circle" />
-            <h1>One-stop  destination <br /> for all student <br /> needs</h1>
+            <h1>One-stop destination <br /> for all student <br /> needs</h1>
           </div>
           <div className="home-des">
             <span className='secondaryText'>Find a variety of properties that suit you very easily</span>

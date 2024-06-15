@@ -6,13 +6,12 @@ const GetStarted = () => {
     <div className='get-started'>
       <div className="g-container">
         <div className="inner-container">
-          <span className='secondaryText1'>Get Started with YourCityLives</span>
+          <span className='secondaryText1'>You can grow faster than you think!</span>
           <span className='primaryText'>
-            "Subscribe and receive super attractive price quotes from us."
-            <br />
-            "Find your place soon."
+          Plan with Crest to fulfil your demand today, and dreams tomorrow. We bring the methods and
+          <br /> technologies of large global companies to help brands of all sizes scale.
           </span>
-          <button onClick={() => window.location.href = 'mailto:namitgoyal485@gmail.com'}>Get Started</button>
+          <button >Get Started with YourCityLives </button>
         </div>
       </div>
     </div>

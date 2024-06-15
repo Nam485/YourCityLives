@@ -3,8 +3,7 @@
     justify-content: center;
     overflow-y: auto;
     scrollbar-width: none;
-    padding: 2rem 1rem;
-    background-color: black;
+    padding-top: 70px;
   }
   
   a {
@@ -17,12 +16,12 @@
   .cc-container {
     width: 4.64286rem;
     margin-right: 1.42857rem;
-    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid #e8d7c1;
+    background-color: #f9f9f9;
+    border: 1px solid #f9f9f9;
     border-radius: 10px;
     position: relative;
     padding: 1.28571rem 1.78571rem;
@@ -64,7 +63,7 @@
   }
   
   .textComponent {
-    color: #fdc063;
+    color: linear-gradient(157deg, #fc907e, #9f6eed);;
     font-size: 1rem;
     font-weight: 600;
     padding: 2.14286rem 0 0;

@@ -1,4 +1,4 @@
-import { faBars, faChevronDown, faTimes, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
@@ -55,7 +55,8 @@ const Header = () => {
         <div className={`h-menu ${menuOpen ? 'open' : ''}`}>
           <Link to="/" onClick={toggleMenu}>Home</Link>
           <Link to="/about" onClick={toggleMenu}>About us</Link>
-          <div className="dropdown">
+          <Link to ="/service" onClick={toggleMenu}>Services</Link>
+          {/* <div className="dropdown">
             <span className="dropdown-toggle" onClick={toggleDropdown}>
               <a href="/"><span> Services </span></a>{' '}
               <FontAwesomeIcon
@@ -72,7 +73,7 @@ const Header = () => {
                 <Link to="/tiffin-service" onClick={toggleMenu}>Tiffin service</Link>
               </div>
             )}
-          </div>
+          </div> */}
           <Link to="/get-started" onClick={toggleMenu}>Get Started</Link>
           <button className="h-button" onClick={handleContactClick}>Contact</button>
           <div className="login-icon" onClick={handleLogin}>

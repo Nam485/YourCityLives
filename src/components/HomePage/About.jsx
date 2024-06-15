@@ -1,4 +1,13 @@
 import React, { useEffect, useRef } from 'react';
+import about1 from '../../assets/about-1.jpg';
+import about2 from '../../assets/about-2.jpg';
+import about3 from '../../assets/about-3.jpg';
+import about4 from '../../assets/about-4.jpg';
+import about5 from '../../assets/about-5.jpg';
+import about6 from '../../assets/about-6.jpg';
+import about7 from '../../assets/about-7.jpg';
+import about8 from '../../assets/about-8.jpg';
+import about9 from '../../assets/about-9.jpg';
 import './About.css';
 
 const About = () => {
@@ -53,11 +62,11 @@ const About = () => {
         <div className="detail">
           <div className="detail-left">
             <div className="detail-left-l">
-              <img src="/assets/about-1.jpg" alt="About 1" />
+              <img src={about1} alt="About 1" />
             </div>
             <div className="detail-left-r">
-              <img src="/assets/about-2.jpg" alt="About 2" />
-              <img src="/assets/about-3.jpg" alt="About 3" />
+              <img src={about2} alt="About 2" />
+              <img src={about3} alt="About 3" />
             </div>
           </div>
           <div className="detail-right">
@@ -78,11 +87,11 @@ const About = () => {
           </div>
           <div className="detail-left">
             <div className="detail-left-r">
-              <img src="/assets/about-5.jpg" alt="About 5" />
-              <img src="/assets/about-6.jpg" alt="About 6" />
+              <img src={about5} alt="About 5" />
+              <img src={about6} alt="About 6" />
             </div>
             <div className="detail-left-l">
-              <img src="/assets/about-4.jpg" alt="About 4" />
+              <img src={about4} alt="About 4" />
             </div>
           </div>
         </div>
@@ -93,11 +102,11 @@ const About = () => {
         <div className="detail">
           <div className="detail-left">
             <div className="detail-left-l">
-              <img src="/assets/about-7.jpg" alt="About 7" />
+              <img src={about7} alt="About 7" />
             </div>
             <div className="detail-left-r">
-              <img src="/assets/about-8.jpg" alt="About 8" />
-              <img src="/assets/about-9.jpg" alt="About 9" />
+              <img src={about8} alt="About 8" />
+              <img src={about9} alt="About 9" />
             </div>
           </div>
           <div className="detail-right">
