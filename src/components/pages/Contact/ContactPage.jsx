@@ -2,10 +2,9 @@ import React from 'react'
 import Contact from '../../ContactPage/Contact'
 
 const ContactPage = () => {
-  return (
-    <div>
+  return (  
       <Contact />
-    </div>
+    
   )
 }
 

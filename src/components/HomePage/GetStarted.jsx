@@ -1,17 +1,19 @@
 import React from 'react';
-import './GetStarted.css';
+import styles from './GetStarted.module.css';
 
 const GetStarted = () => {
+  const handleExploreMoreClick = () => {
+    window.location.href = '/get-started';
+  };
   return (
-    <div className='get-started'>
-      <div className="g-container">
-        <div className="inner-container">
-          <span className='secondaryText1'>You can grow faster than you think!</span>
-          <span className='primaryText'>
-          Plan with Crest to fulfil your demand today, and dreams tomorrow. We bring the methods and
-          <br /> technologies of large global companies to help brands of all sizes scale.
+    <div className={styles['get-started']}>
+      <div className={styles["g-container"]}>
+        <div className={styles["inner-container"]}>
+          <span className={styles['secondaryText1']}>Grow Faster Than You Think with YourCityLives</span>
+          <span className={styles['primaryText']}>
+          Plan with YourCityLives to meet your current demands today and your dreams tomorrow. We bring the methods and  technologies of large global companies to help local brands of all sizes scale.
           </span>
-          <button >Get Started with YourCityLives </button>
+          <button onClick={handleExploreMoreClick} >Get Started with YourCityLives </button>
         </div>
       </div>
     </div>

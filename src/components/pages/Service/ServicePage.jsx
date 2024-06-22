@@ -1,12 +1,20 @@
-import React from 'react'
-import ServiceNav from '../../ServicePage/ServiceNav'
+import { default as React, useState } from 'react';
+import { Route, Routes } from "react-router-dom";
+import Navbar from "../../ServicePage/Navbar.jsx";
+import Home from "../../ServicePage/ServiceHome.jsx";
 
 const ServicePage = () => {
-  return (
-    <div>
-      <ServiceNav />
-    </div>
-  )
-}
+    const [sidebar, setSidebar] = useState(true);
+    const [searchTerm, setSearchTerm] = useState('');
+  
+    return (
+      <div>
+        <Navbar setSidebar={setSidebar} setSearchTerm={setSearchTerm} />
+        <Routes>
+          <Route path="/" element={<Home sidebar={sidebar} searchTerm={searchTerm} />} />
+        </Routes>
+      </div>
+    );
+  };
 
 export default ServicePage

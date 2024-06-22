@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import crossIcon from '../cross_icon.png'; // Make sure to import your assets properly
 import './LoginPopup.css';
@@ -14,11 +15,15 @@ const LoginPopup = ({ setShowLogin }) => {
     } else {
       document.body.style.overflow = 'auto'; // Allow scrolling on background content
     }
+
+    // Clean up function to restore default body overflow behavior
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
   }, [currState]);
 
   const handleClose = () => {
     setShowLogin(false);
-    document.body.style.overflow = 'auto'; // Restore default body overflow behavior
   };
 
   const handleLogin = (type) => {
@@ -45,7 +50,7 @@ const LoginPopup = ({ setShowLogin }) => {
         <form className="login-popup-container">
           <div className="login-popup-title">
             <h2>{currState}</h2>
-            <img src={crossIcon} alt="Close" onClick={handleClose} />
+            <button onClick={handleClose} ><img src={crossIcon} alt="closeIcon" /></button>
           </div>
           <div className="login-popup-input">
             {currState === 'Sign Up' && (
@@ -88,6 +93,10 @@ const LoginPopup = ({ setShowLogin }) => {
       </div>
     </div>
   );
+};
+
+LoginPopup.propTypes = {
+  setShowLogin: PropTypes.func.isRequired,
 };
 
 export default LoginPopup;

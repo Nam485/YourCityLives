@@ -1,31 +1,27 @@
+/* Consultancy.module.css */
+
 .c-wrapper {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   padding: 20px;
-  /* border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   max-width: 100%; /* Adjusted to fit within the page */
-margin: 0;
-  
-  background-color: #151218;
-  align-items: center;
-  justify-content: center;
+  margin: 0 auto; /* Centers the component horizontally */
+  background-color: #fff0f0;
 }
 
-h1 {
-  font-size: 24px;
-  color: white;
+.c-wrapper h1 {
+  font-size: 2.5rem;
 }
-.c-wrapper span{
-  margin-top: -15px;
-  font-size: 1.2rem;
+
+.c-wrapper span {
+  font-size: 1.5rem;
   margin-bottom: 2rem;
-  color: rgb(211, 202, 202);
+  color: rgb(60, 56, 56);
 }
 
 .details {
   display: flex;
+  flex-wrap: wrap; /* Allows items to wrap if space is insufficient */
   justify-content: space-between;
   width: 100%;
   gap: 1rem; /* Adds space between each title */
@@ -39,25 +35,25 @@ h1 {
 .title h3 {
   margin: 0 0 5px;
   font-size: 16px;
-  color: rgb(211, 202, 202);
+  color: rgb(60, 56, 56);
 }
 
 .title input {
-  width: 90%;
+  width: 100%; /* Adjusted to take full width of parent */
   padding: 10px;
   font-size: 14px;
   background-color: #f4f4f4;
   border: 2px solid #ccc;
-  border-radius: 6px;
+  border-radius: 10px;
 }
 
 .Submit-button {
   padding: 10px 20px;
   font-size: 16px;
   color: #fff;
-  background-color: #007bff;
+  background-color: #ff9101;
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
   cursor: pointer;
   margin-top: 20px;
   transition: background-color 0.3s;

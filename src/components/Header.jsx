@@ -1,29 +1,18 @@
 import { faBars, faTimes, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import logo192 from '../logo192.png';
-import './Header.css';
+import styles from './Header.module.css';
 import LoginPopup from './LoginPopup'; // Import the LoginPopup component
 
 const Header = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
   const [showLoginPopup, setShowLoginPopup] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
 
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
-  };
-
   const toggleLoginPopup = () => {
     setShowLoginPopup(!showLoginPopup);
-  };
-
-  const closeDropdown = (e) => {
-    if (!e.target.closest('.dropdown')) {
-      setDropdownOpen(false);
-    }
   };
 
   const handleLogin = () => {
@@ -38,49 +27,23 @@ const Header = () => {
     setMenuOpen(!menuOpen);
   };
 
-  // useEffect to handle closing dropdown on outside click
-  useEffect(() => {
-    document.addEventListener('click', closeDropdown);
-    return () => {
-      document.removeEventListener('click', closeDropdown);
-    };
-  }, []);
-
   return (
-    <section className="h-wrapper">
-      <div className="h-container">
-        <div className="logo">
+    <section className="sticky top-0 bg-[#151218] text-white z-50">
+      <div className="flex justify-between items-center flex-wrap p-4 mx-auto max-w-7xl">
+        <div>
           <img src={logo192} alt="Logo" width={120} />
         </div>
-        <div className={`h-menu ${menuOpen ? 'open' : ''}`}>
-          <Link to="/" onClick={toggleMenu}>Home</Link>
-          <Link to="/about" onClick={toggleMenu}>About us</Link>
-          <Link to ="/service" onClick={toggleMenu}>Services</Link>
-          {/* <div className="dropdown">
-            <span className="dropdown-toggle" onClick={toggleDropdown}>
-              <a href="/"><span> Services </span></a>{' '}
-              <FontAwesomeIcon
-                icon={faChevronDown}
-                className={`arrow-icon ${dropdownOpen ? 'rotate' : ''}`}
-              />
-            </span>
-            {dropdownOpen && (
-              <div className="dropdown-menu">
-                <Link to="/pg-flats" onClick={toggleMenu}>PG/Flats</Link>
-                <Link to="/healthcare" onClick={toggleMenu}>HealthCare</Link>
-                <Link to="/laundry" onClick={toggleMenu}>Laundry</Link>
-                <Link to="/transport" onClick={toggleMenu}>Transport</Link>
-                <Link to="/tiffin-service" onClick={toggleMenu}>Tiffin service</Link>
-              </div>
-            )}
-          </div> */}
-          <Link to="/get-started" onClick={toggleMenu}>Get Started</Link>
-          <button className="h-button" onClick={handleContactClick}>Contact</button>
-          <div className="login-icon" onClick={handleLogin}>
+        <div className={`${styles['h-menu']} ${menuOpen ? styles['open'] : ''}`}>
+          <Link to="/" onClick={toggleMenu} className='hover:text-[#fdc063]'>Home</Link>
+          <Link to="/about" onClick={toggleMenu} className='hover:text-[#fdc063]'>About us</Link>
+          <Link to="/service" onClick={toggleMenu} className='hover:text-[#fdc063]'>Services</Link>
+          <Link to="/get-started" onClick={toggleMenu} className='hover:text-[#fdc063] '>Get Started</Link>
+          <button className={`py-2 px-4  transition duration-300 ease-in-out border-none ${styles['custom-gradient']}`} onClick={handleContactClick}>Contact</button>
+          <div className="login-icon text-2xl cursor-pointer hover:text-[#fdc063]" onClick={handleLogin}>
             <FontAwesomeIcon icon={faUser} />
           </div>
         </div>
-        <div className="menu-icon" onClick={toggleMenu}>
+        <div className={`${styles['menu-icon']} text-2xl block md:hidden cursor-pointer`} onClick={toggleMenu}>
           <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
         </div>
       </div>
