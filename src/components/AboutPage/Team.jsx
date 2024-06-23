@@ -63,9 +63,9 @@ const Team = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="xl:w-1/2">
+                    <div className="xl:w-1/2 ">
                         <h1 className="text-3xl font-semibold text-gray-800 capitalize text-right lg:text-4xl" data-aos="fade-left">Website Developers</h1>
-                        <p className="max-w-2xl mt-4 text-gray-500 text-right" data-aos="fade-left">
+                        <p className="max-w-2xl mt-4 text-gray-500 text-right " data-aos="fade-left">
                             Our website developers are the backbone of our online presence, bringing innovative ideas to life and ensuring a seamless user experience.
                         </p>
                     </div>
